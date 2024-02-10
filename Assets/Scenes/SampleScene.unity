@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028353, g: 0.22571383, b: 0.30692253, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4756,7 +4756,7 @@ MonoBehaviour:
   _receiveAllAddresses: 0
   _useExplicitConnection: 0
   _explicitConnection: {fileID: 0}
-  _oscPort: 9000
+  _oscPort: 8000
   _receiveAllPorts: 0
   _redrawFlag: 0
   _foldoutList: []
@@ -22113,6 +22113,72 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1710209642}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1715860804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1715860806}
+  - component: {fileID: 1715860805}
+  m_Layer: 0
+  m_Name: OSCConnection.-6876
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1715860805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715860804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaad75f03bc9d2942a2a4dd8e734324f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _transmissionTypeIn: 0
+  _transmissionTypeOut: 0
+  autoConnectOSCIn: 1
+  _oscPort: 8000
+  _isValidOscIPAddress: 1
+  _isValidOscMulticastIPAddress: 1
+  _oscMulticastIPAddress: 224.0.1.0
+  oscOut: 1
+  autoConnectOSCOut: 1
+  foldoutOSCOut: 1
+  foldoutOSCIn: 1
+  _isValidOscOutIPAddress: 1
+  _oscOutIPAddress: 10.237.4.84
+  _isValidOscOutMulticastIPAddress: 1
+  _oscOutMulticastIPAddress: 224.0.1.0
+  _oscOutPort: 9000
+  redrawFlag: 0
+  dispatchOSC: 1
+  dispatchOSCOut: 1
+  oscMappingFileObjList: []
+  oscSessionFileObjList: []
+  SendSessionDataOnStart: 0
+--- !u!4 &1715860806
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715860804}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1726666631
 Mesh:
   m_ObjectHideFlags: 0
@@ -22969,6 +23035,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sphere (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5959188977159398187, guid: 75ad8c2fb3ddb4037863d9e5bf0d43e8,
+        type: 3}
+      propertyPath: _oscPort
+      value: 8000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27210,3 +27281,4 @@ SceneRoots:
   - {fileID: 366653901}
   - {fileID: 2109358271}
   - {fileID: 2010601409}
+  - {fileID: 1715860806}

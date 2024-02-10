@@ -70,37 +70,30 @@ namespace UniOSC{
 
 				break;
 
-			case Mode.Relative:
-                    //z = 0f;
-                    //y =  (float)msg.Data[0];
-                    //if(msg.Data.Count >= 2){
-                    //	x =  (float)msg.Data[1];
-                    //}
-                    //if(msg.Data.Count >= 3){
-                    //	z =  (float)msg.Data[2];
-                    //}
-
-                    // 由于OSC消息只有一个数据，我们假设它是用于Z轴的
+                case Mode.Relative:
                     if (msg.Data[0] is float)
                     { // 确保数据可以被解析为float
-                        z += (float)msg.Data[0]; // 使用该数据更新Z轴位置
+                        float inputValue = (float)msg.Data[0]; // OSC消息提供的值，范围0到1
+                        float startTarget = -8f; // z轴的目标开始范围
+                        float endTarget = 50f; // z轴的目标结束范围
+
+                        // 映射OSC消息的值到z轴的目标范围
+                        float mappedZ = startTarget + (endTarget - startTarget) * inputValue;
+
+                        // 应用更新后的位置
+                        transformToMove.transform.position = new Vector3(x, y, mappedZ);
                     }
                     else
                     {
                         // 可能需要错误处理或转换逻辑
                     }
-                    // 应用更新后的位置
-                    transformToMove.transform.position = new Vector3(x, y, z);
                     break;
 
-                    //                pos = new Vector3(x,y,z);
-                    //transformToMove.transform.position += pos; 
-                    //break;
 
             }
 
 
-		}
+        }
 
 	}
 

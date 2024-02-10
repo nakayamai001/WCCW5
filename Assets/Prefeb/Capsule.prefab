@@ -128,7 +128,7 @@ MonoBehaviour:
   _receiveAllAddresses: 0
   _useExplicitConnection: 0
   _explicitConnection: {fileID: 0}
-  _oscPort: 9000
+  _oscPort: 8000
   _receiveAllPorts: 0
   _redrawFlag: 0
   _foldoutList: []
